@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabaña Clásica</title>
+    <link rel="icon" href="/static/images/logo.png">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/alojamiento.css">
+</head>
+<body>
+
+    <?php include 'templates/header.php'; ?>
+
+    <section class="accommodation-carousel">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="/static/images/cabañaClasica-1.jpg" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/cabañaClasica-2.jpg" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/cabañaClasica-3.jpg" alt="Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/cabañaClasica-4.jpg" alt="Image 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/cabañaClasica-5.jpg" alt="Image 5">
+                </div>
+            </div>
+            <button class="carousel-control-prev" onclick="prevSlide()">❮</button>
+            <button class="carousel-control-next" onclick="nextSlide()">❯</button>
+        </div>
+    </section>
+
+    <section class="accommodation-container">
+        <!-- Detalles del alojamiento -->
+        <div class="accommodation-details">
+            <h1>Bungalow Deluxe</h1>
+            <p class="accommodation-meta">Bungalow | 2-5 personas | 25m²</p>
+            <p class="accommodation-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            <div class="amenities-section">
+                <h2>Servicios</h2>
+                <div class="amenities-grid">
+                    <!-- Category: Bedrooms & Bedding -->
+                    <div class="amenity-category">
+                        <h3>DORMITORIOS Y SÁBANAS</h3>
+                        <ul>
+                            <li><img src="/static/images/bed.png" alt="Bed Icon"> Cama Doble: 1 (160x200)</li>
+                            <li><img src="/static/images/bedding.png" alt="Bedding Icon"> Ropa de Cama</li>
+                            <li><img src="/static/images/air-condition.png" alt="Air Condition Icon"> Aire Acondicionado</li>
+                            <li><img src="/static/images/crib.png" alt="Crib Icon"> Cuna (a petición)</li>
+                            <li><img src="/static/images/single-bed.png" alt="Single Bed Icon"> Cama Individual: 1 (80x200)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category: Kitchen -->
+                    <div class="amenity-category">
+                        <h3>COCINA</h3>
+                        <ul>
+                            <li><img src="/static/images/sink.png" alt="Sink Icon"> Fregadero</li>
+                            <li><img src="/static/images/fridge.png" alt="Fridge Icon"> Frigorífico</li>
+                            <li><img src="/static/images/stove.png" alt="Stove Icon"> Cocina de Gas</li>
+                            <li><img src="/static/images/kettle.png" alt="Kettle Icon"> Hervidor</li>
+                            <li><img src="/static/images/plates.png" alt="Plates Icon"> Platos y Cubiertos Completos (6)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category: Bathroom -->
+                    <div class="amenity-category">
+                        <h3>BAÑO</h3>
+                        <ul>
+                            <li><img src="/static/images/toilet.png" alt="Private Bathroom Icon"> Aseo Privado (exterior)</li>
+                            <li><img src="/static/images/shower.png" alt="Shower Icon"> Ducha (exterior)</li>
+                            <li><img src="/static/images/bathroom-sink.png" alt="Bathroom Sink Icon"> Lavabo de Baño (exterior)</li>
+                            <li><img src="/static/images/towel.png" alt="Towel Icon"> Ropa de Baño (con cargo extra)</li>
+                            <li><img src="/static/images/hair-dryer.png" alt="Hair Dryer Icon"> Secador de Pelo</li>
+                            <li><img src="/static/images/essentials.png" alt="Essentials Icon"> Esenciales</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category: Outdoor Equipment -->
+                    <div class="amenity-category">
+                        <h3>EQUIPAMIENTO EXTERIOR</h3>
+                        <ul>
+                            <li><img src="/static/images/umbrella.png" alt="Sunshade Icon"> Sombrilla</li>
+                            <li><img src="/static/images/garden-table.png" alt="Garden Table Icon"> Mesa y Sillas de Jardín</li>
+                            <li><img src="/static/images/sunlounger.png" alt="Sunlounger Icon"> Tumbona</li>
+                            <li><img src="/static/images/bbq.png" alt="BBQ Icon"> Equipamiento para Barbacoa</li>
+                            <li><img src="/static/images/tools.png" alt="Tools Icon"> Herramientas Disponibles</li>
+                            <li><img src="/static/images/bicycle.png" alt="Bicycle Icon"> Bicicleta (a petición)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zona de reserva -->
+        <div class="reservation-section">
+            <div class="reservation-details">
+                <h2>Reserva</h2>
+                <div class="reservation-item">
+                    <label for="checkin" class="reservation-label">Entrada:</label>
+                    <div class="date-container" onclick="document.getElementById('checkin').showPicker();">
+                        <input type="date" id="checkin" class="date-picker">
+                        <img src="/static/images/calendar.png" class="icon-calendar" alt="Calendar Icon">
+                    </div>
+                </div>
+
+                <div class="reservation-item">
+                    <label for="checkout" class="reservation-label">Salida:</label>
+                    <div class="date-container" onclick="document.getElementById('checkout').showPicker();">
+                        <input type="date" id="checkout" class="date-picker">
+                        <img src="/static/images/calendar.png" class="icon-calendar" alt="Calendar Icon">
+                    </div>
+                </div>
+                <div class="reservation-item">
+                    <div class="guest-section">
+                        <label for="checkout" class="reservation-label">Huéspedes:</label>
+                        <p id="guest-summary" class="guests-summary">2 Adultos</p>
+                        <div class="guest-dropdown">
+                            <div class="guest-option">
+                                <label for="adults">Adultos</label>
+                                <div class="guest-controls">
+                                    <button class="guest-minus" data-type="adults" data-delta="-1">-</button>
+                                    <span id="adults-count">2</span>
+                                    <button class="guest-plus" data-type="adults" data-delta="1">+</button>
+                                </div>
+                            </div>
+                            <div class="guest-option">
+                                <label for="children">Niños <small>(3-13 años)</small></label>
+                                <div class="guest-controls">
+                                    <button class="guest-minus" data-type="children" data-delta="-1">-</button>
+                                    <span id="children-count">0</span>
+                                    <button class="guest-plus" data-type="children" data-delta="1">+</button>
+                                </div>
+                            </div>
+                            <div class="guest-option">
+                                <label for="infants">Bebes <small>(0-2 años)</small></label>
+                                <div class="guest-controls">
+                                    <button class="guest-minus" data-type="infants" data-delta="-1">-</button>
+                                    <span id="infants-count">0</span>
+                                    <button class="guest-plus" data-type="infants" data-delta="1">+</button>
+                                </div>
+                            </div>
+                            <button class="guest-done-btn">HECHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Servicios Extra</h3>
+                <ul class="extra-services">
+                    <li>
+                        <input type="checkbox" class="extra-service-checkbox" data-price="10">
+                        <span class="extra-service-label">Salida Tardía</span>
+                        <span class="extra-service-line"></span>
+                        <span class="service-price">10€</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="extra-service-checkbox" data-price="20">
+                        <span class="extra-service-label">Tarifa de Limpieza</span>
+                        <span class="extra-service-line"></span>
+                        <span class="service-price">20€</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="extra-service-checkbox" data-price="3">
+                        <span class="extra-service-label">Lavadora (hasta 7kg)</span>
+                        <span class="extra-service-line"></span>
+                        <span class="service-price">3€</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="extra-service-checkbox" data-price="0">
+                        <span class="extra-service-label">Mascota</span>
+                        <span class="extra-service-line"></span>
+                        <span class="service-price">Gratis</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="extra-service-checkbox" data-price="3">
+                        <span class="extra-service-label">Alquiler de Nevera</span>
+                        <span class="extra-service-line"></span>
+                        <span class="service-price">3€</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="extra-service-checkbox" data-price="5">
+                        <span class="extra-service-label">Deposito de Seguridad</span>
+                        <span class="extra-service-line"></span>
+                        <span class="service-price">5€</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="extra-service-checkbox" data-price="10">
+                        <span class="extra-service-label">Ropa de Cama</span>
+                        <span class="extra-service-line"></span>
+                        <span class="service-price">10€</span>
+                    </li>
+                </ul>
+
+                <div class="price-summary">
+                    <p>Precio</p>
+                    <p class="price-total"></p>
+                </div>
+
+                <button class="book-now-btn">RESERVAR AHORA</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-accommodations">
+        <h2>Alojamientos Relacionados</h2>
+        <div class="accommodation-grid">
+            <!-- Tent -->
+            <div class="accommodation-item">
+                <img src="/static/images/tent.jpg" alt="Tent">
+                <div class="accommodation-header">
+                    <h3>Habitación Individual</h3>
+                    <p>1 persona | 8m²</p>
+                </div>
+                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                <div class="accommodation-footer">
+                    <div class="accommodation-icons">
+                        <img src="/static/images/bed.png" alt="Cama Doble">
+                        <img src="/static/images/kitchen.png" alt="Cocina">
+                        <img src="/static/images/umbrella.png" alt="Sombrilla">
+                    </div>
+                    <div class="accommodation-button">
+                        <button>Disponibilidad <img src="/static/images/flecha.png" class="arrow" alt="Arrow"></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Cabin Trailer -->
+            <div class="accommodation-item">
+                <img src="/static/images/cabinTrailer.jpg" alt="Cabin Trailer">
+                <div class="accommodation-header">
+                    <h3>Habitación Doble</h3>
+                    <p>2 personas | 12m²</p>
+                </div>
+                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                <div class="accommodation-footer">
+                    <div class="accommodation-icons">
+                        <img src="/static/images/kitchen.png" alt="Cocina">
+                        <img src="/static/images/umbrella.png" alt="Sombrilla">
+                        <img src="/static/images/toilet.png" alt="Baño">
+                    </div>
+                    <div class="accommodation-button">
+                        <button>Disponibilidad <img src="/static/images/flecha.png" class="arrow" alt="Arrow"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <?php 
+        include 'templates/footer.php'; 
+        include 'templates/upperButton.php';
+    ?>
+
+    <!-- Archivos JavaScript -->
+    <script src="/static/js/swiper.js"></script>
+    <script src="/static/js/updateTotalPrice.js"></script>
+    <script src="/static/js/bookingManager.js"></script> <!-- Se debe cargar antes de priceCalculator.js -->
+    <script src="/static/js/guestManager.js"></script>
+    <script src="/static/js/priceCalculator.js"></script>
+</body>
+</html>
