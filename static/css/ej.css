@@ -1,0 +1,25 @@
+/* Contenido de la sección hero */
+.hero-content {
+    transition: transform 1s ease, opacity 1s ease; /* Transición para ocultar el contenido suavemente */
+}
+
+/* Cuando el video esté en reproducción, ocultamos el contenido */
+.hero.video-playing .hero-content {
+    transition: opacity 0.8s ease;; /* Mueve el contenido fuera de la vista */
+    opacity: 0; /* El contenido se desvanece */
+}
+
+/* Eliminar el overlay cuando el video se reproduce */
+.hero.video-playing .hero-container::before {
+    opacity: 0; /* Desaparece el overlay cuando el video está en reproducción */
+}
+
+/* Restaurar el contenido y el overlay cuando el mouse está sobre el video */
+.hero:hover .hero-container::before {
+    opacity: 1; /* El overlay vuelve al pasar el mouse */
+}
+
+.hero:hover .hero-content {
+    transform: translateY(0);
+    opacity: 1; /* El texto vuelve a aparecer */
+}
