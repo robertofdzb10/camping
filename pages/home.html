@@ -10,7 +10,51 @@
 </head>
 <body>
 
-    <?php include 'templates/header.php'; ?>
+    <header>
+        <div class="top-bar">
+            <div class="terms"> 
+                <a href="#">Terminos de Uso</a> | 
+                <a href="#">Política de Privacidad</a>
+            </div>
+            <div class="contact-info">
+                <a href="tel:+34 947 308 649">Tel. 947 308 649</a> |
+                <a href="mailto:info@campingelrionela.com">info@campingelrionela.com</a>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="weather">
+                <a href="#" >Trespaderne<br>&nbsp;&nbsp;&nbsp;☀ 26°C</a>
+            </div>
+            <ul class="nav-links left">
+                <li><a href="#">ALOJAMIENTOS</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Habitación Individual</a></li>
+                        <li><a href="#">Habitación Doble</a></li>
+                        <li><a href="#">Habitación Deluxe</a></li>
+                        <li><a href="#">Bungalow Telsa</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ACTIVIDADES</a>
+                </li>
+                <li><a href="#">CERVECERÍA</a>
+                </li>
+            </ul>
+            <a href="/pages/home.html" class="logo">
+                <img src="/static/images/logo.png" alt="Campground Logo">
+            </a>
+            <ul class="nav-links right">
+                <li><a href="#">ENTORNO</a>
+                </li>
+                <li><a href="#">RESERVAS</a>
+                </li>
+                <li><a href="#">CONTACTO</a>
+                </li>
+            </ul>
+            <div class="language-selector">
+                <a href="#">EN</a> | <a href="#">ES</a>
+            </div>
+        </nav>
+    </header>
 
     <section class="hero">
         <div class="hero-container">
@@ -304,10 +348,62 @@
         </div>
     </section>    
 
-    <?php 
-        include 'templates/footer.php'; 
-        include 'templates/upperButton.php';
-    ?>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>Lorem ipsum</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati sint nobis repellat rerum unde in at, nulla amet odit delectus, molestiae dicta reiciendis maiores.</p>
+                <br>
+                <h3>Redes Sociales</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="/static/images/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="/static/images/instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="/static/images/tripadvisor-icon.png" alt="Tripadvisor"></a>
+                    <a href="#"><img src="/static/images/twitter-icon.png" alt="Twitter"></a>
+                </div>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contacto</h2>
+                <p>Dir. <a href="https://maps.app.goo.gl/FpUYWydfTwqBWWhYA">Zocilla, 1, 09540, Trespaderne</a></p>
+                <p>Tel. <a href="tel:+34 947 308 649">947 308 649</a></p>
+                <p>App: <a href="https://line.me/en/">Line</a>, <a href="https://web.whatsapp.com/">WhatsApp</a></p>
+                <p>C.e: <a href="mailto:info@campingelrionela.com">info@campingelrionela.com</a></p>
+                <a href="https://maps.app.goo.gl/FpUYWydfTwqBWWhYA" class="map-link">
+                    <img src="/static/images/ubicacion-icon.png" alt="Ubicación" class="map-icon">Encuentranos en el mapa
+                </a>
+            </div>
+            <div class="footer-section links">
+                <h2>Enlaces</h2>
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Alojamientos</a></li>
+                    <li><a href="#">Actividades cercanas</a></li>
+                    <li><a href="#">Reserva</a></li>
+                    <li><a href="#">Cervecería</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h2>Boletín Informativo</h2>
+                <p>Suscríbete a nuestro boletín y mantente al día con nuestras últimas promociones.</p>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Correo" required>
+                    <button type="submit">→</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><a href="#">Terminos de Uso</a> | <a href="#">Política de Privacidad</a></p>
+            <p>© Camping Río Nela,  Todos los derechos reservados</p>
+        </div>
+    </footer>
+    
+    <!-- Botón flotante para subir -->
+    <a href="#" class="scroll-to-top">
+        <img src="/static/images/arrow.png" alt="Go to Top">
+    </a>
+    
+    <!-- Archivos JavaScript -->
+    <script src="/static/js/upperButton.js"></script>
 
 <script src="/static/js/videoManager.js"></script>
 
